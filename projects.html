@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAN</title>
+<link rel="icon" type="image/x-icon" href="img/icono.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cring" id="cring"></div>
+<div class="noise"></div>
+<canvas id="bgc"></canvas>
+<div class="hud" id="hud"></div>
+
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<header>
+  <nav>
+    <a class="nl" href="index.html">STAN</a>
+    <button class="ham" id="ham" aria-label="Menú" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" data-page="index.html" data-k="nav_home">INICIO</a></li>
+      <li><a href="about.html" data-page="about.html" data-k="nav_about">SOBRE MÍ</a></li>
+      <li><a href="projects.html" data-page="projects.html" data-k="nav_projects">PROYECTOS</a></li>
+      <li><button class="langb" id="lb" onclick="tgl()">EN</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- GALLERY MODAL -->
+<div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-project-name">
+    <header class="modal-header">
+      <h2 class="modal-title" id="modal-project-name">Proyecto</h2>
+      <button class="modal-close" onclick="closeGallery()">✕ CERRAR</button>
+    </header>
+    <div class="modal-main-img">
+      <button class="modal-nav modal-prev" onclick="galPrev()">‹</button>
+      <img id="modal-main" src="" alt="Project screenshot">
+      <button class="modal-nav modal-next" onclick="galNext()">›</button>
+      <div class="modal-counter" id="modal-counter">1 / 4</div>
+    </div>
+    <div class="modal-thumbs" id="modal-thumbs"></div>
+    <div class="modal-info">
+      <p class="modal-desc">Haz clic en las miniaturas o usa las flechas para navegar entre las capturas del proyecto.</p>
+    </div>
+  </div>
+</div>
+
+<main style="padding-bottom:120px">
+  <div class="cd tl"></div><div class="cd br"></div>
+  <section class="projects-hero">
+    <span class="stag" data-k="p_tag">PROYECTOS DESTACADOS</span>
+    <h1 class="stitle" data-k="p_title">Mi trabajo</h1>
+    <div class="divider"></div>
+  </section>
+  <section class="project-list pgrid" id="pg">
+    <article class="pcard reveal" data-cat="web">
+      <div class="pim"><img src="/img/healthsync.png" alt="NeoCommerce" loading="lazy"><div class="pov"></div><div class="pbadge">WEB, APP MOVIL</div></div>
+      <div class="pbody">
+        <span class="pnum">01</span>
+        <h2 class="pname" data-k="p1n">HEALTHSYNC</h2>
+        <p class="pdesc" data-k="p1d">(proyecto) Plataforma de ejercicio de alto rendimiento con rutinas en tiempo real, panel de analíticas y sistema de recomendación personalizada.</p>
+        <div class="plinks">
+          <button class="pgallery-btn" onclick="openGallery(1, this.closest('.pcard').querySelector('.pname').textContent)">⊞ FOTOS</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="pcard reveal" data-cat="api">
+      <div class="pim"><img src="/img/mediquick.png" alt="DataStream" loading="lazy"><div class="pov"></div><div class="pbadge">APP MOVIL</div></div>
+      <div class="pbody">
+        <span class="pnum">02</span>
+        <h2 class="pname" data-k="p2n">MEDIQUICK</h2>
+        <p class="pdesc" data-k="p2d">(proyecto) Plataforma de envios de medicina con recomendaciones en base a tus sintomas.</p>
+        <div class="plinks">
+          <button class="pgallery-btn" onclick="openGallery(2, this.closest('.pcard').querySelector('.pname').textContent)">⊞ FOTOS</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="pcard reveal" data-cat="web">
+      <div class="pim"><img src="/img/ideart.png" alt="Analytics" loading="lazy"><div class="pov"></div><div class="pbadge">WEB, APP MOVIL</div></div>
+      <div class="pbody">
+        <span class="pnum">03</span>
+        <h2 class="pname" data-k="p3n">IDEART</h2>
+        <p class="pdesc" data-k="p3d">Aplicacion y sitio web para venta de productos de sublimado.</p>
+        <div class="plinks">
+          <button class="pgallery-btn" onclick="openGallery(3, this.closest('.pcard').querySelector('.pname').textContent)">⊞ FOTOS</button>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer><em>STANLEY</em> · <span data-k="foot">Diseñado &amp; Construido por</span> <em>STANLEY DUENAS</em> · <em id="yr"></em></footer>
+<script src="main.js"></script>
+</body>
+</html>

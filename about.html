@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAN</title>
+<link rel="icon" type="image/x-icon" href="img/icono.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cring" id="cring"></div>
+<div class="noise"></div>
+<canvas id="bgc"></canvas>
+<div class="hud" id="hud"></div>
+
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<header>
+  <nav>
+    <a class="nl" href="index.html">STAN</a>
+    <button class="ham" id="ham" aria-label="Menú" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" data-page="index.html" data-k="nav_home">INICIO</a></li>
+      <li><a href="about.html" data-page="about.html" data-k="nav_about">SOBRE MÍ</a></li>
+      <li><a href="projects.html" data-page="projects.html" data-k="nav_projects">PROYECTOS</a></li>
+      <li><button class="langb" id="lb" onclick="tgl()">EN</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="cd tl"></div><div class="cd br"></div>
+  <section class="about-hero">
+    <span class="stag" data-k="a_tag">SOBRE MÍ</span>
+    <h1 class="stitle reveal" data-k="a_title">Quién soy</h1>
+    <div class="divider reveal"></div>
+  </section>
+  <section class="about-content agrid">
+    <article>
+      <p class="atxt reveal" data-k="a_p1">Soy un <strong>desarrollador full stack</strong> con más de 4 años de experiencia construyendo productos digitales que combinan lógica sólida con experiencias visuales atractivas.</p>
+      <div class="sgrid reveal">
+        <div class="sch">React</div><div class="sch">Node.js</div>
+        <div class="sch">Python</div><div class="sch">PostgreSQL</div>
+        <div class="sch">HTML</div><div class="sch">CSS</div>
+        <div class="sch">Oracle Database</div><div class="sch">MongoDB</div>
+        <div class="sch">C#</div><div class="sch">Kotlin</div>
+      </div>
+    </article>
+    <aside class="reveal">
+      <div class="term">
+        <div class="th"><div class="td r"></div><div class="td y"></div><div class="td g"></div><span class="tlbl">terminal — dev.sh</span></div>
+        <div class="tb">
+          <div><span class="tp">➜ </span><span class="tc">whoami</span></div>
+          <div class="to" data-k="tm1">Full Stack Developer</div>
+          <div><span class="tp">➜ </span><span class="tc">cat stack.json</span></div>
+          <div class="to">{ frontend: <em>"React, HTML, CSS"</em> }</div>
+          <div class="to">{ backend: <em>"Node, Python, Java"</em> }</div>
+          <div><span class="tp">➜ </span><span class="tc">status</span></div>
+          <div class="to"><em data-k="tm2">✔ Disponible para proyectos</em></div>
+          <div><span class="tp">➜ </span><span class="tc">email:</span></div>
+          <div class="to"><em data-k="tm3">stanley.duenass@gmail.com</em></div>
+          <div><span class="tp">➜ </span><span class="tcur"></span></div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="xi"><div class="xl"><span>Frontend</span><span>92%</span></div><div class="xt"><div class="xf" data-w="92"></div></div></div>
+        <div class="xi"><div class="xl"><span>Backend</span><span>88%</span></div><div class="xt"><div class="xf" data-w="88"></div></div></div>
+        <div class="xi"><div class="xl"><span>DevOps / Cloud</span><span>75%</span></div><div class="xt"><div class="xf" data-w="75"></div></div></div>
+        <div class="xi"><div class="xl"><span>UI/UX Design</span><span>80%</span></div><div class="xt"><div class="xf" data-w="80"></div></div></div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer><em>STANLEY</em> · <span data-k="foot">Diseñado &amp; Construido por</span> <em>STANLEY DUENAS</em> · <em id="yr"></em></footer>
+<script src="main.js"></script>
+</body>
+</html>

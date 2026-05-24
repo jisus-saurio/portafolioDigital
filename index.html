@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAN</title>
+<meta name="description" content="Portafolio de Stanley Duenas.">
+<link rel="icon" type="image/x-icon" href="img/icono.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cring" id="cring"></div>
+<div class="noise"></div>
+<canvas id="bgc"></canvas>
+<div class="hud" id="hud"></div>
+
+<div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+<header>
+  <nav>
+    <a class="nl" href="index.html">STAN</a>
+    <button class="ham" id="ham" aria-label="Menú" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" data-page="index.html" data-k="nav_home">INICIO</a></li>
+      <li><a href="about.html" data-page="about.html" data-k="nav_about">SOBRE MÍ</a></li>
+      <li><a href="projects.html" data-page="projects.html" data-k="nav_projects">PROYECTOS</a></li>
+      <li><button class="langb" id="lb" onclick="tgl()">EN</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main style="align-items:flex-start;overflow:hidden">
+  <div class="cd tl"></div><div class="cd br"></div>
+  <section class="hero">
+    <div class="hcont">
+      <div class="heye"><span class="ln"></span><span data-k="h_ey">DESARROLLADOR FULL STACK</span></div>
+      <h1 class="htitle">
+        <span data-k="h_t1">Construyo</span><br>
+        <span class="ac glitch" data-text="experiencias" data-k="h_t2">experiencias</span><br>
+        <span data-k="h_t3">digitales.</span>
+      </h1>
+      <p class="hsub" data-k="h_sub">Especialista en arquitecturas modernas, interfaces de alto impacto y sistemas backend escalables.</p>
+      <div class="hcta">
+        <a class="bp" href="projects.html" data-k="h_c1">Ver proyectos</a>
+      </div>
+      <div class="hstats">
+        <div><div class="snum">3+</div><div class="slbl" data-k="s1">Proyectos</div></div>
+        <div><div class="snum">4+</div><div class="slbl" data-k="s2">Años exp.</div></div>
+        <div><div class="snum">10</div><div class="slbl" data-k="s3">Tecnologías</div></div>
+      </div>
+    </div>
+    <aside class="cw">
+      <div class="cube">
+        <div class="face front">REACT</div><div class="face back">NODE.JS</div>
+        <div class="face left">PYTHON</div><div class="face right">JAVA</div>
+        <div class="face top">ORACLE</div><div class="face bot">SQL</div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer><em></em> · <span data-k="foot">Diseñado &amp; Construido por</span> <em>STANLEY DUENAS</em> · <em id="yr"></em></footer>
+<script src="main.js"></script>
+</body>
+</html>
